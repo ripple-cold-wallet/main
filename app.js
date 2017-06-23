@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-var rippleKeyPairs = require("ripple-keypairs");
+var rippleKeyPairs = require('ripple-keypairs');
 var app = express();
 
 
@@ -58,6 +58,10 @@ console.log("secret: " + secret + "\naddress: " + address)
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
+
+//app.listen(process.env.PORT || 3000, function(){
+//  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+//});
 
 // var http = require('http');
 // http.createServer(function (req, res){
