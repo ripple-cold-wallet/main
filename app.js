@@ -49,13 +49,15 @@ console.log("secret: " + secret + "\naddress: " + address)
   res.redirect('/');
 });
 
-var port = process.env.PORT || 1337;
-app.listen(port, function(){
-  console.log('ready on port ' + port);
+//var port = process.env.PORT || 1337;
+//app.listen(port, function(){
+//  console.log('ready on port ' + port);
+//});
+
+
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
-
-
-
 
 // var http = require('http');
 // http.createServer(function (req, res){
