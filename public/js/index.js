@@ -30,20 +30,24 @@ function generateKey() {
   //$.post('/add');
 
   $.ajax({
-  url: '/generate',
-  complete: function(data) {
-    qr1 = data.responseJSON.address;
-    qr2 = data.responseJSON.secret;
-    // console.log("public: " + data.responseJSON.secret);
-    qrcode1.makeCode(qr1);
-    qrcode2.makeCode(qr2);
-    qrcode3.makeCode(qr1);
+    url: '/generate',
+    beforeSend : function() {
+      $('.gen-text').hide();
+      $('.loader').show();
+    },
+    complete: function(data) {
+      qr1 = data.responseJSON.address;
+      qr2 = data.responseJSON.secret;
+      // console.log("public: " + data.responseJSON.secret);
+      qrcode1.makeCode(qr1);
+      qrcode2.makeCode(qr2);
+      qrcode3.makeCode(qr1);
 
-    $('.receive').html(qr1);
-    $('.receive2').html(qr1);
-    $('.send').html(qr2);
-  }
-});
+      $('.receive').html(qr1);
+      $('.receive2').html(qr1);
+      $('.send').html(qr2);
+    }
+  });
 
   //return Math.random().toString(36).substr(2, 8) + Math.random().toString(36).substr(2, 8) + Math.random().toString(36).substr(2, 8) + Math.random().toString(36).substr(2, 8)
 }
