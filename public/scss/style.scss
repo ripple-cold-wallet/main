@@ -1,0 +1,62 @@
+.bit-bg {
+  background: url('../img/wallet.png') no-repeat;
+  display: block;
+  height: 529px;
+  width: 758px;
+  padding: 56.14;
+  position: relative;
+}
+
+.button-lg {
+  padding: 10px;
+}
+
+.receive {
+  position: absolute;
+  top: 178px;
+  left: 465px;
+  font-size: 9px;
+  color: white;
+}
+
+.receive2 {
+  position: absolute;
+  bottom: 115px;
+  left: 63px;
+  font-size: 9.5px;
+  color: black;
+}
+
+.send {
+  position: absolute;
+  bottom: 109px;
+  right: 95px;
+  font-size: 10px;
+  color: white;
+}
+
+.rotate{
+  -webkit-transform: rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#qrcode1 {
+  position: absolute;
+  top: 33px;
+  left: 487px;
+}
+
+#qrcode2 {
+  position: absolute;
+  bottom: 87px;
+  right: 225px;
+}
+
+#qrcode3 {
+  position: absolute;
+  bottom: 87px;
+  right: 426px;
+}

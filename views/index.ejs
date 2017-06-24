@@ -1,21 +1,27 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html >
 <head>
-  <meta charset="utf-8">
-  <title>My App</title>
+  <meta charset="UTF-8">
+  <title>Ripple Wallet Generator</title>
+      <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-  <h1>  <%= title %></h1>
-  <ul>
-    <% for(var i = 0; i < items.length; i++){ %>
-      <li> <%= items[i].desc %></li>
-    <% } %>
-  </ul>
 
-  <form action="/add" method="post">
-    <input type="text" name="newItem" />
-    <input type="submit" />
-  </form>
+<body>
+<div class="bit-bg">
+  <p class="receive"><%= address %></p>
+  <p class="receive2 rotate"><%= address %></p>
+  <p class="send rotate"><%= secret %></p>
+  <div id="qrcode1"></div>
+  <div id="qrcode2"></div>
+  <div id="qrcode3"></div>
+</div>
+<button class="button-lg" id="generate">Generate</button>
+<button class="button-lg" id="clear">Clear</button>
+
+  <script src='/js/jquery.min.js'></script>
+<script src='/js/qrcode.min.js'></script>
+
+    <script src="/../js/index.js"></script>
 
 </body>
 </html>

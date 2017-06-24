@@ -1,0 +1,36 @@
+.bit-bg {
+  background: url("/../img/fk8j9s.png") no-repeat;
+  display: block;
+  height: 410px;
+  width: 798px;
+  padding: 56.14;
+  position: relative;
+}
+
+.button-lg {
+  padding: 10px;
+}
+
+.receive {
+  position: absolute;
+  top: -5px;
+  left: 40px;
+}
+
+.send {
+  position: absolute;
+  bottom: 11px;
+  right: 50px;
+}
+
+#qrcode1 {
+  position: absolute;
+  top: 54px;
+  left: 37px;
+}
+
+#qrcode2 {
+  position: absolute;
+  bottom: 71px;
+  right: 47px;
+}
