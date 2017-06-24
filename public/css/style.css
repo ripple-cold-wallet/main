@@ -1,36 +1,127 @@
+/* line 1, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+html, body {
+  width: 100%;
+  height: 100%; }
+
+/* line 6, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+body {
+  background: #dbecfb;
+  overflow: hidden;
+  text-align: center;
+  user-select: none;
+  padding: 0;
+  margin: 0; }
+
+/* line 15, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+.container {
+  margin: 0 auto;
+  background: #eff7fe;
+  width: 60%;
+  height: 100%;
+  padding: 20px; }
+
+/* line 23, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
 .bit-bg {
-  background: url("/../img/fk8j9s.png") no-repeat;
+  background: url("../img/wallet.png") no-repeat;
+  border-radius: 20px;
+  box-shadow: 3px 3px 0 #cbdeec;
   display: block;
-  height: 410px;
-  width: 798px;
-  padding: 56.14;
+  height: 529px;
+  margin: 0 auto;
   position: relative;
-}
+  width: 758px; }
 
+/* line 34, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+.button-wrapper {
+  display: inline-block;
+  margin: 20px auto; }
+
+/* line 39, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
 .button-lg {
-  padding: 10px;
-}
+  background: #64B5F6;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 3px 3px 0 #cbdeec;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  padding: 20px;
+  text-transform: uppercase;
+  transition: 0.1s;
+  width: 150px; }
+  /* line 52, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+  .button-lg:hover {
+    background: #74bdf7; }
+  /* line 54, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+  .button-lg:active {
+    background: #54a6e7;
+    box-shadow: inset 3px 3px 0 #4490cd; }
 
+/* line 60, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
 .receive {
+  color: #fff;
+  font-size: 9px;
+  height: 13px;
+  left: 461px;
+  line-height: 16px;
   position: absolute;
-  top: -5px;
-  left: 40px;
-}
+  text-align: center;
+  top: 184px;
+  vertical-align: middle;
+  width: 188px; }
 
+/* line 73, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+.receive2 {
+  bottom: 209px;
+  color: #000;
+  font-size: 9px;
+  height: 14px;
+  left: 162px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: 188px; }
+
+/* line 86, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
 .send {
+  bottom: 209px;
+  color: #fff;
+  font-size: 9px;
+  height: 14px;
+  left: 589px;
+  line-height: 16px;
   position: absolute;
-  bottom: 11px;
-  right: 50px;
-}
+  text-align: center;
+  vertical-align: middle;
+  width: 188px; }
 
+/* line 99, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+.rotate {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+
+/* line 109, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
 #qrcode1 {
+  left: 484px;
   position: absolute;
-  top: 54px;
-  left: 37px;
-}
+  top: 31px; }
 
+/* line 115, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
 #qrcode2 {
+  bottom: 87px;
   position: absolute;
-  bottom: 71px;
-  right: 47px;
-}
+  right: 225px; }
+
+/* line 121, C:/heroku/ripple-cold-wallet/public/scss/style.scss */
+#qrcode3 {
+  bottom: 89px;
+  position: absolute;
+  right: 426px; }
+
+/*# sourceMappingURL=../css/style.map */
