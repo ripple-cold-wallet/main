@@ -124,3 +124,9 @@ body {
   position: absolute;
   right: 426px;
 }
+
+@media print{
+   .no-print{
+       display:none;
+   }
+}
