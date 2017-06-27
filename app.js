@@ -1,67 +1,42 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-var rippleKeyPairs = require("ripple-keypairs");
+var rippleKeyPairs = require('ripple-keypairs');
 var app = express();
 
 
 //configure app
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 //use middleware
 app.use(bodyParser());
 
+//initialize variables
+var secret = null;
+var keypair = null;
+var address = null;
+
+
 //define routes
-
-var todoItems = [
-                { id: 1, desc: 'foo' },
-                { id: 2, desc: 'bar'},
-                { id: 3, desc: 'baz'}
-              ];
-
-              var secret = null;
-              var keypair = null;
-              var address = null;
-
-
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'My App',
-    items: todoItems
+    address: address,
+    secret: secret
   });
 });
 
-app.post('/add', function(req, res){
-  var newItem = req.body.newItem;
-  console.log(newItem);
-  todoItems.push({
-    id: todoItems.length + 1,
-    desc: newItem
-  });
-
-
-secret = rippleKeyPairs.generateSeed();
-var keypair = rippleKeyPairs.deriveKeypair(secret);
-var address = rippleKeyPairs.deriveAddress(keypair.publicKey);
-console.log("secret: " + secret + "\naddress: " + address)
-
-
-  res.redirect('/');
+app.get('/generate', function(req, res, next) {
+  secret = rippleKeyPairs.generateSeed();
+  keypair = rippleKeyPairs.deriveKeypair(secret);
+  address = rippleKeyPairs.deriveAddress(keypair.publicKey);
+  console.log("secret: " + secret + "\naddress: " + address);
+  res.json({ secret:  secret,
+             address: address
+          });
 });
-
-//var port = process.env.PORT || 1337;
-//app.listen(port, function(){
-//  console.log('ready on port ' + port);
-//});
-
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
-
-// var http = require('http');
-// http.createServer(function (req, res){
-//   res.writeHead(200, {'Content-Type': 'text/plain'});
-//   res.end('Hello World\n');
-// }).listen(1337, '127.0.0.1');
-// console.log('Server running at http://127.0.0.1:1337/');

@@ -1,0 +1,126 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #dbecfb;
+  overflow: hidden;
+  text-align: center;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  background: #eff7fe;
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+}
+
+.bit-bg {
+  background: url('../img/wallet.png') no-repeat;
+  border-radius: 20px;
+  box-shadow: 3px 3px 0 #cbdeec;
+  display: block;
+  height: 529px;
+  margin: 0 auto;
+  position: relative;
+  width: 758px;
+} // bit-bg
+
+.button-wrapper {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+.button-lg {
+  background: #64B5F6;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 3px 3px 0 #cbdeec;
+  color: #fff;
+  font-size: 20px;
+  height: 63px;
+  outline: none;
+  padding: 20px;
+  text-transform: uppercase;
+  transition: 0.1s;
+  width: 150px;
+
+  &:hover { background: #74bdf7; }
+
+  &:active {
+    background: #54a6e7;
+    box-shadow: inset 3px 3px 0 #4490cd;
+  }
+} // button-lg
+
+.receive {
+  color: #fff;
+  font-size: 9px;
+  height: 13px;
+  left: 461px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 184px;
+  vertical-align: middle;
+  width: 188px;
+} // receive
+
+.receive2 {
+  bottom: 209px;
+  color: #000;
+  font-size: 9px;
+  height: 14px;
+  left: 162px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: 188px;
+} // receive2
+
+.send {
+  bottom: 209px;
+  color: #fff;
+  font-size: 9px;
+  height: 14px;
+  left: 589px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: 188px;
+} // send
+
+.rotate {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+} // rotate
+
+#qrcode1 {
+  left: 484px;
+  position: absolute;
+  top: 31px;
+}
+
+#qrcode2 {
+  bottom: 87px;
+  position: absolute;
+  right: 225px;
+}
+
+#qrcode3 {
+  bottom: 89px;
+  position: absolute;
+  right: 426px;
+}

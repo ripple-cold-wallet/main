@@ -1,5 +1,5 @@
 {
 	"name": "Ripple Cold Wallet",
 	"description": "A printable ripple wallet generator",
-	"repository": "https://github.com/ripple-cold-wallet/main.git"
+	"repository": "https://git.heroku.com/ripple-cold-wallet.git"
 }

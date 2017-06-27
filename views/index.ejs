@@ -1,21 +1,35 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>My App</title>
-</head>
-<body>
-  <h1>  <%= title %></h1>
-  <ul>
-    <% for(var i = 0; i < items.length; i++){ %>
-      <li> <%= items[i].desc %></li>
-    <% } %>
-  </ul>
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Ripple Wallet Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-  <form action="/add" method="post">
-    <input type="text" name="newItem" />
-    <input type="submit" />
-  </form>
+  <body>
+    <div class="container">
+      <div class="bit-bg">
+        <div class="receive">
+          <span><%= address %></span>
+        </div>
+        <div class="receive2 rotate">
+          <span><%= address %></span>
+        </div>
+        <div class="send rotate">
+          <span><%= secret %></span>
+        </div>
+        <div id="qrcode1"></div>
+        <div id="qrcode2"></div>
+        <div id="qrcode3"></div>
+      </div> <!-- bit-bg -->
+      <div class="button-wrapper">
+        <button class="button-lg" id="generate">Generate</button>
+        <button class="button-lg" id="clear">Clear</button>
+      </div> <!-- button-wrapper -->
+    </div> <!-- container -->
 
-</body>
+    <script src='/js/jquery.min.js'></script>
+    <script src='/js/qrcode.min.js'></script>
+    <script src="/../js/index.js"></script>
+  </body>
 </html>
